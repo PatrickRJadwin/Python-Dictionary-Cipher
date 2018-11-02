@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # Name: Patrick Jadwin
 # Class: CITC 1317
 # Date: Nov 2, 2018
@@ -18,6 +20,10 @@ if len(sys.argv) > 2:
     exit(0)
 if not re.match(".*\.txt", sys.argv[1]):
     print('not a text file')
+    exit(0)
+
+# Uncomment next line to reverse encryption
+# e = {v: k for k, v in encrypt.items()}
 
 # Check for duplicate values in encryption dictionary
 count = 0
@@ -32,9 +38,6 @@ for k, v in e.items():
     count = 0
 
 words = []
-
-# Uncomment next line to reverse encryption
-# e = {v: k for k, v in encrypt.items()}
 
 # provided file
 passFile = sys.argv[1]
